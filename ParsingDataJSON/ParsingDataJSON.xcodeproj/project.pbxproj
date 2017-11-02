@@ -17,6 +17,7 @@
 		DCAF91781FA977AF002E763C /* KivaLoanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF91771FA977AF002E763C /* KivaLoanTableViewController.swift */; };
 		DCAF917A1FA977C5002E763C /* KivaLoanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF91791FA977C5002E763C /* KivaLoanTableViewCell.swift */; };
 		DCAF917C1FA977DF002E763C /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF917B1FA977DF002E763C /* Loan.swift */; };
+		DCDE995B1FAABCF000274FE2 /* DataDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDE995A1FAABCF000274FE2 /* DataDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		DCAF91771FA977AF002E763C /* KivaLoanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KivaLoanTableViewController.swift; sourceTree = "<group>"; };
 		DCAF91791FA977C5002E763C /* KivaLoanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KivaLoanTableViewCell.swift; sourceTree = "<group>"; };
 		DCAF917B1FA977DF002E763C /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
+		DCDE995A1FAABCF000274FE2 /* DataDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				DCAF91771FA977AF002E763C /* KivaLoanTableViewController.swift */,
 				DCAF91791FA977C5002E763C /* KivaLoanTableViewCell.swift */,
 				DCAF917B1FA977DF002E763C /* Loan.swift */,
+				DCDE995A1FAABCF000274FE2 /* DataDetailViewController.swift */,
 			);
 			path = ParsingDataJSON;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCAF914A1FA973EC002E763C /* ViewController.swift in Sources */,
+				DCDE995B1FAABCF000274FE2 /* DataDetailViewController.swift in Sources */,
 				DCAF917C1FA977DF002E763C /* Loan.swift in Sources */,
 				DCAF91781FA977AF002E763C /* KivaLoanTableViewController.swift in Sources */,
 				DCAF917A1FA977C5002E763C /* KivaLoanTableViewCell.swift in Sources */,

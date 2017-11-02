@@ -9,7 +9,13 @@
 import UIKit
 
 class KivaLoanTableViewController: UITableViewController {
-
+    
+    var namaSelected:String?
+    var CountrySelected:String?
+    var UseSelected:String?
+    var AmountSelected: Int = 0
+    
+    
     //deklarasikan url untuk mengambil datajson
     let kivaLoanURL = "https://api.kivaws.org/v1/loans/newest.json"
     //deklarasika varibale loans untuk mengambil class Loan yang sudah dibuat sebelumnya
@@ -55,6 +61,9 @@ class KivaLoanTableViewController: UITableViewController {
         cell.LabelCountry.text = loans[indexPath.row].country
         cell.LabelUse.text = loans[indexPath.row].use
         cell.LabelAmount.text = "$\(loans[indexPath.row].amount)"
+        
+        let data = loans[indexPath.row]
+        
 
         return cell
     }
@@ -135,8 +144,37 @@ class KivaLoanTableViewController: UITableViewController {
         }
         return loans
     }
-    
+     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        //mengecek data yang dikirim
+        print("Row \(indexPath.row)selected")
+        
+        let task = loans[indexPath.row]
+        //memasukan data ke variable namaSelected dan image selected ke masing masing variable nya
+        namaSelected = task.name
+        CountrySelected = task.country
+        UseSelected = task.use
+        AmountSelected = task.amount
+        
+        //memamnggil segue passDataDetail
+        performSegue(withIdentifier: "PassData", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //mengecek apakah segue nya ada atau  tidak
+        if segue.identifier == "PassData"{
+            //kondisi ketika segue nya ada
+            //mengirimkan data ke detailViewController
+            let kirimData = segue.destination as! DataDetailViewController
+            //mengirimkan data ke masing2 variable
+            //mengirimkan nama wisata
+            kirimData.passName = namaSelected
+            //mengirimkan data gambar wisata
+            kirimData.passCountry = CountrySelected
+            kirimData.passUse = UseSelected
+            kirimData.passAmount = AmountSelected
+            
 
+        }
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
